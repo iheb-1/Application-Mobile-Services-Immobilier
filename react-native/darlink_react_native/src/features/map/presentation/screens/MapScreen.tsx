@@ -494,8 +494,6 @@ export const MapScreen: React.FC<MapScreenProps> = ({
         <TouchableOpacity
           style={[styles.fab, { backgroundColor: cardSurface(isDark), borderColor: colors.border }]}
           onPress={() => setZoom((z) => Math.min(18, Math.round(z) + 1))}
-          accessibilityLabel="Zoom avant"
-          onPress={() => setZoom((z) => Math.min(18, z + 1))}
           accessibilityLabel={t('map_zoom_in')}
         >
           <Plus size={18} color={colors.textPrimary} />
@@ -503,8 +501,6 @@ export const MapScreen: React.FC<MapScreenProps> = ({
         <TouchableOpacity
           style={[styles.fab, { backgroundColor: cardSurface(isDark), borderColor: colors.border }]}
           onPress={() => setZoom((z) => Math.max(5, Math.round(z) - 1))}
-          accessibilityLabel="Zoom arrière"
-          onPress={() => setZoom((z) => Math.max(5, z - 1))}
           accessibilityLabel={t('map_zoom_out')}
         >
           <Minus size={18} color={colors.textPrimary} />
